@@ -10,15 +10,14 @@
     scroll-behavior: smooth;
 } 
 :root {
-    --textcolor: #478ff1;
+    --textcolor: #3a6cf4;
+    --mainbackgruond: #000016 ;
 }
 /* start container */
-/*.container {
-    padding-left: 15px;
-    padding-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-} */
+.container {
+    padding-left: 200px;
+    padding-right: 200px;
+} 
 /*end cotainer */
 /* start header */ 
 header {
@@ -29,41 +28,294 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 200px;
-} /*
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-} */
-.navigation {
-    text-transform: capitalize;
 } 
-header  .navigation a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--textcolor); 
+.navigation a:hover {
+color: rgb(153, 0, 255);
 }
-a.logo {
+header .navigation a {
+    text-transform: capitalize;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--textcolor);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
+  padding-left: 30px;
 }
-/* end header 
+.logo { 
+    text-transform: uppercase ;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.8em;
+    color: var(--textcolor);
+}
+/* end header */ 
+/* start main */
+ section {
+    padding: 100px 200px;
+ }
+ .main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(background.jpeg) no-repeat; 
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+ }
+ .main div h2 {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-transform: capitalize;
+ }
+ .main div h2 span {
+    font-size: 3em;
+    color: var(--textcolor);
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-top: 10px;
+ } 
+ .main div h3 {
+   color: white;
+   font-weight: 700;
+   font-size: 2em;
+   letter-spacing: 1px;
+   margin-top: 10px;
+   margin-bottom: 30px;
+ }
+ .main div h3::first-letter {
+    text-transform: capitalize;
+ }
+ .main div .main-btn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--textcolor);
+    padding: .9375em 2.1875em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: inline-block;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    transition: .5s ease;
+ }
+ .main div .main-btn:hover {
+ background-color: blue;
+    transform: scale(1.1);
+ }
+ .main div .socile a {
+    color: white;
+    padding-right: 30px;
+    font-size: 30px;
+ }
+/* end main */ 
+
+/* start services */ 
+.title {
+   display: flex;
+   justify-content: center;
+   color: var(--textcolor);
+   font-size: 2.2em;
+   font-weight: 800;
+   margin-bottom: 30px;
+}
+ .content {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+} 
+.card {
+   background-color: #fff;
+   width: 21.25em; 
+   box-shadow: 0 5px 25px rgb(1 1 1 /15%);
+   border-radius: 10px;
+   padding: 25px;
+   margin: 15px;
+   transition: .7s ease;
+} 
+.card:hover {
+transform: scale(1.1);
+} 
+.icon {
+   font-size: 8em;
+   text-align: center;
+   color: var(--textcolor);
+} 
+.content .card .info {
+ text-align: center;
+}
+.cards .content .card .info h3 {
+   font-size: 1.2em;
+   color: var(--textcolor);
+   margin: 10px;
+   font-weight: 700; 
+}
+/* end services */
+ /* start projects  */
+ .projects {
+   background-color: var(--mainbackgruond);
+ }
+ .projects .content {
+   padding-top: 30px;
+ } 
+ .project-card {
+   background-color: #fff;
+   border: 1px solid #fff;
+   min-height: 14em;
+   width: 23em;
+   overflow: hidden; /*تنسيق كرت الصورة */
+   border-radius: 10px;
+   margin: 20px;
+   transition: 0.7s ease;
+ } 
+ .project-card:hover {
+   transform: scale(1.1);
+ }
+ .project-imag:hover {
+   opacity: .9;
+ }
+ .project-imag img { /* تنسيق الصورة */
+  width: 100%;
+ }
+ .project-info {
+   padding: 1em;
+ } 
+ .project-info p {
+   font-size: .8em;
+   color: #000;
+ }
+ .project-info strong {
+   display: flex;
+   justify-content: space-between; 
+   text-transform: uppercase;
+   font-weight: 800; 
+   margin-top: 10px;
+ } 
+ .project-info strong a {
+   text-decoration: none;
+   color: var(--textcolor);
+ }
+ .project-info strong a:hover {
+   color: rgb(153, 0, 255);
+ } 
+ /* end projects */ 
+ /* start the contact */ 
+ .contact .card .icon {
+   font-size: 4.5em;
+ }
+ .info-contact {
+   text-align: center; 
+ } 
+
+ .info-contact h3 {
+   font-weight: 800;
+   text-transform: capitalize;
+   color: #000;
+ } 
+ .info-contact p {
+   font-size: 1.3em;
+ }
+ /*end the contact */ 
+ /* start the footer */ 
+  footer {
+   background-color: var(--mainbackgruond);
+   padding: 2em;
+   display: flex;
+    justify-content: space-between;
+  } 
+  footer p {
+   color: #fff;
+   font-size: 1.3em;
+   font-weight: 600;
+   text-transform: capitalize;
+  } 
+footer span {
+   color: var(--textcolor);
+}
+.socile-footer a {
+color: #fff; 
+padding-left: 12px ;
+font-size: 1.3em; 
+}  
+ /* end the footer */
+@media (max-width: 1023px) {
+  header {
+    padding: 12px 20px;
+  } 
+  header .navigation a{
+    padding-left: 10px;
+  } 
+  .title:not(#Exception) {
+    font-size: 2.8em;
+  }
+  section {
+    padding: 80px 20px;
+  } 
+  .main-content h2 {
+    font-size: 1em; /* ما عارف هذه لأي عنصر */
+  }
+  .main-content h3 {
+    font-size: 1.6em; /* ما اعرف هذه لأي عنصر */
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  /* .project-card {
+    width: 32em;
+  } */
+  /* .card {
+    width: 25em;
+  } */
+@media (max-width:641px) {
+  body {
+    font-size: 12px;
+  }
+  .main-content h2 {
+    font-size: 0.8em; /* ما عارف هذه لأي عنصر */
+  }
+  .main-content h3 {
+    font-size: 1.4em; /* ما عارف هذه لأي عنصر */
+  }
+} 
+@media (max-width:300px) {
+  body {
+    font-size: 10px;
+  }
+}
+@media (max-width:299px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+} 
+@media (min-width:1024px) {
+  .title:not(#Exception) {
+    font-size: 4.5em;
+  }
+  .project-card {
+    width: 35em;
+  }
+}
 /* small screen */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .container {
        width: 750px;
     }
-    }
     /*  medium screen */
-      @media (min-width: 992px) {
+      /* @media (min-width: 992px) {
        .container {
            width: 970px;
         }
-      }
+      } */
     /* large screen */
-      @media (min-width:1200px) {
+      /* @media (min-width:1200px) {
        .container {
            width: 1170px; } 
        }
+    }  */ 
